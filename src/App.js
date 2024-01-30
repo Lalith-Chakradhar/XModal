@@ -1,6 +1,6 @@
 import './App.css';
 import {useState} from 'react';
-import XModal from './XModal.js';
+import XModal from './components/XModal/XModal';
 
 function App() {
 

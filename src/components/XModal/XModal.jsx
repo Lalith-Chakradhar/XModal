@@ -19,7 +19,7 @@ const XModal = ({setIsOpenModal, setModalOpenBackground}) => {
   const validationChecks = () => {
     if(!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)))
     {
-      window.alert("Invalid email. Please check your email address.");
+      window.alert("Invalid email. Your email address should be in the format:- text@text.text");
       return;
     }
 
@@ -96,7 +96,7 @@ const XModal = ({setIsOpenModal, setModalOpenBackground}) => {
             onChange={handleFormDataChange}
             required/>
             <div>
-            <button type='submit' className={styles.submit}>Submit</button>
+            <button type='submit' className={styles.submitButton}>Submit</button>
             </div>
           </form>
         </div>
