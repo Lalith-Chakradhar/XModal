@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from "./XModal.module.css";
+import "./XModal.css";
 
 
 const XModal = ({setIsOpenModal, setModalOpenBackground}) => {
@@ -40,7 +40,7 @@ const XModal = ({setIsOpenModal, setModalOpenBackground}) => {
 
   return (
     <div
-    className={styles.modalBackground}
+    className="modalBackground"
     onClick={() => {
       //close modal on clicking modal background
       setIsOpenModal(false);
@@ -53,16 +53,16 @@ const XModal = ({setIsOpenModal, setModalOpenBackground}) => {
         dob:''
       }));
     }}>
-        <div className={styles.modalContainer} 
+        <div className="modal" 
         onClick={(e) => {
           //do not close modal when clicked inside modal container, 
           // which is part of modal background.
           e.stopPropagation();
         }}>
-        <div className={styles.modalHeader}>
+        <div className="modalHeader">
           <h1>Fill Details</h1>
         </div>
-        <div className={styles.modalBody}>
+        <div className="modal-content">
           <form onSubmit={validationChecks}>
             <label htmlFor="username"><h3>Username:</h3></label>
             <input 
@@ -96,7 +96,7 @@ const XModal = ({setIsOpenModal, setModalOpenBackground}) => {
             onChange={handleFormDataChange}
             required/>
             <div>
-            <button type='submit' className={styles.submit}>Submit</button>
+            <button type='submit' className="submit-button">Submit</button>
             </div>
           </form>
         </div>
